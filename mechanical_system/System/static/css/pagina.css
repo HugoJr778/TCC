@@ -1,0 +1,10 @@
+.error{
+    color: red;
+    border-color: red;
+}
+#error{
+    display: none;
+}
+#errorcpf{
+    display: none;
+}

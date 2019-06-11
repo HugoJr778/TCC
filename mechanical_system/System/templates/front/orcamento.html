@@ -1,0 +1,54 @@
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Orcamento">
+  
+  <div class="w-100">
+  <h2 class="mb-5">Orçamento</h2>
+        
+  <div id="tables_form">
+    <div class="form-row" v-for="(dado, index) in dados">
+      <div class="form-group col-md-6">
+          <label>Descrição da Peça</label>
+          <input type="text" class="form-control" title="Nome da Peça" placeholder="Peça" name="DescricaoPeca" v-model="dado.one">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Quant.Valor Unit. R$</label><br>
+      </div>
+        <button class="btn btn-dark">+</button>
+        <button class="btn btn-dark">-</button>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control" v-model="dado.two" />
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control" v-model="dado.tree"/>
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" class="form-control" v-model="dado.four" /> 
+          </div>
+          <div class="form-group col-md-2">             
+            <input type="text" class="form-control" v-model="dado.five" />
+          </div>
+        <button id="3" @click ="add_linha" id="add_fild">Adicionar</button>
+        <button  @click=" excluir_linha(index)">Deletar</button>  
+      <hr>
+    </div>
+  </div>
+        
+        
+           
+            
+            <button>+</button>
+            <button>-</button>
+              <div style="float: right">
+              <label>Quant</label>
+                <input type="text" class="campo1" style="width:50px" />
+              <label>R$</label> 
+                <input type="text" class="campo1" style="width:50px"/>
+            </div>
+            <hr>
+
+            <label>Quant.ValorUnit(R$)</label><br>
+               
+            <button type="submit" style="float: right" >Cancelar</button> 
+            <button type="submit" style="float: right" >Salvar</button>
+          </form>
+
+      </section>

@@ -1,0 +1,105 @@
+<html lang="pt-br"><head><script src="https://unpkg.com/vue"></script>
+
+{% load staticfiles %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <title>Mechanical System</title>
+    <link rel="shortcut icon" href="{% static 'img/logoICO.ico'%}" type="image/x-icon">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  
+  
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet">
+  
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/resume.css'%}" rel="stylesheet">
+  
+  </head>
+  <body id="page-top">
+      <div id="app">
+      <nav id="sideNav" class="navbar navbar-expand-lg navbar-dark bg-menu fixed-top"
+      ><a href="#page-top" class="navbar-brand js-scroll-trigger">
+          <span class="d-block d-lg-none">Menu</span> 
+          <span class="d-none d-lg-block"><img src="{% static 'img/test.jpeg'%}" alt="" class="img-fluid img-profile rounded-circle mx-auto mb-2">
+        </span></a> 
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span></button> 
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav"><li class="nav-item"><a href="#Inici" class="nav-link js-scroll-trigger">inicial</a></li> 
+                    <li class="nav-item"><a href="#CadCli" class="nav-link js-scroll-trigger">Cadastro Cliente</a></li> 
+                    <li class="nav-item"><a href="#CadFun" class="nav-link js-scroll-trigger active">Cadastro Funcionario</a></li>
+                     <li class="nav-item"><a href="#Consulta" class="nav-link js-scroll-trigger">Consulta</a></li> 
+                     <li class="nav-item"><a href="#Relatorio" class="nav-link js-scroll-trigger">Relatório</a></li> 
+                     <li class="nav-item"><a href="#Orcamento" class="nav-link js-scroll-trigger">Orçamento</a></li></ul></div></nav> 
+                     <div id="html" class="container-fluid p-0">
+                         {% block conteudo %}
+
+                         {% endblock %}
+                     </div>
+                    </div>
+  
+  <script>
+  const app = new Vue({
+    el:'#form_table',
+    data:{
+      dados:[]
+    },
+    methods:{
+      add_linha(){
+        this.dados.push({
+          1:'',
+          2:'',
+          3: '',
+          4:'',
+          5:''
+        })
+      },
+      excluir_linha(index){
+        this.dados.splice(index,1)
+      }
+
+    }
+  })
+      new Vue({
+          el: '#app',
+          data() {
+            return {
+              car: false,
+            }  
+          },
+      })
+  </script>
+  <script>
+        function myFunction(){
+      var x = document.getElementById('demo').innerHTML ="<iframe src='listaCliente.php' width='510px' height='600px'></iframe>"
+      }
+      function myFunction2(){
+        var y = document.getElementById('demo2').innerHTML ="<iframe src='listaFuncionario.php' width='510px' height='600px' ></iframe>"
+      }
+  </script>
+  
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'js/bootstrap-datetimepicker.min.js'%}"></script>
+  
+  <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+  
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/resume.min.js'%}"></script>
+  <script src="{% static 'jsfront/location.js' %}"></script>  
+  
+  
+  </body>
+  </html>
