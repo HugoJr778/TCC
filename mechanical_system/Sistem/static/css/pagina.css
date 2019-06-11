@@ -1,0 +1,14 @@
+.error{
+    color: red;
+    border-color: red;
+}
+#error{
+    display: none;
+}
+#errorcpf{
+    display: none;
+}
+.line{
+	text-align: center;
+	border-bottom: 1px solid gray;
+}
