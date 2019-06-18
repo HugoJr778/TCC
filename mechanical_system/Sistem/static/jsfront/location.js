@@ -4,7 +4,8 @@ $(document).ready(function(){
         });
 
         $("#botaologincomcampos").click(function(){
-            if($('#usuario').val()=='admin' && $('#senha').val() == '123456' ){
+            if(($('#usuario').val()=='HugoJr778' && $('#senha').val() == '16091998') || 
+            	($('#usuario').val()=='OPE' && $('#senha').val() == '124589')){
             
                 window.location = $(this).attr('url_index');
             }else{
@@ -13,8 +14,7 @@ $(document).ready(function(){
 					$("#modal_error").modal('hide');
 				}, 2000);
 			}
-            
-            });
+           	});
             $('#cadastra_cliente').click(function(){
                 if((!validaCPF($('#inputCpf').val())) && ($('#inputCpf').val() != '')){
 					$("#inputCpf").addClass('error');
